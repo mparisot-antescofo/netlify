@@ -1,0 +1,30 @@
+{
+  "name": "test-netlify",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --experimental-https",
+    "dev-http": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@next/third-parties": "15.2.4",
+    "i18next": "24.2.3",
+    "next": "15.2.4",
+    "next-i18next": "15.4.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-i18next": "15.4.1"
+  },
+  "devDependencies": {
+    "@netlify/edge-functions": "2.11.1",
+    "@netlify/plugin-nextjs": "5.9.3",
+    "@types/node": "22.13.14",
+    "@types/react": "19.0.12",
+    "@types/react-dom": "19.0.4",
+    "tsx": "4.19.3",
+    "typescript": "5.8.2",
+    "typescript-eslint": "8.28.0"
+  }
+}
