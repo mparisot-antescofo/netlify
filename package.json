@@ -10,12 +10,9 @@
   },
   "dependencies": {
     "@next/third-parties": "15.2.4",
-    "i18next": "24.2.3",
     "next": "15.2.4",
-    "next-i18next": "15.4.2",
     "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "react-i18next": "15.4.1"
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
     "@netlify/edge-functions": "2.11.1",

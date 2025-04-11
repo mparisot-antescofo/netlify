@@ -1,11 +1,9 @@
-import { appWithTranslation } from 'next-i18next';
 import App, {
   type AppContext,
   type AppInitialProps,
   type AppProps,
 } from 'next/app';
 import Head from 'next/head';
-import nextI18NextConfig from '../../next-i18next.config';
 import Layout from '@/layout';
 
 type AppOwnProps = {
@@ -43,4 +41,4 @@ MyApp.getInitialProps = async (
 };
 
 // https://github.com/i18next/next-i18next#unserializable-configs
-export default appWithTranslation(MyApp, nextI18NextConfig);
+export default MyApp;
