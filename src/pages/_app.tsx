@@ -4,7 +4,6 @@ import App, {
   type AppProps,
 } from 'next/app';
 import Head from 'next/head';
-import Layout from '@/layout';
 
 type AppOwnProps = {
   data: string;
@@ -15,7 +14,7 @@ const MyApp = ({
   pageProps,
   data
 }: AppOwnProps & AppProps) => (
-<Layout>
+<>
   <Head>
     <meta charSet="UTF-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -26,7 +25,7 @@ const MyApp = ({
   </Head>
   <Component {...pageProps} />
   <div>Random number: {data}</div>
-</Layout>
+</>
 );
 
 MyApp.getInitialProps = async (
