@@ -2,11 +2,12 @@ import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
 export default async function middleware(request: NextRequest) {
+  const url = request.nextUrl.clone();
+  url.pathname = '/en/test/plop';
 
-  const response = NextResponse.next({ request: { headers: request.headers } });
-  response.headers.set('x-middlewared', 'true');
-
-  return response;
+  return NextResponse.rewrite(url, {
+    request: { headers: request.headers },
+  });
 }
 
 export const config = {
