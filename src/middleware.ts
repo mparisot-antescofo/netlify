@@ -3,11 +3,27 @@ import { NextResponse } from 'next/server';
 
 export default async function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
-  url.pathname = '/en/test/plop';
 
-  return NextResponse.rewrite(url, {
-    request: { headers: request.headers },
-  });
+  if(url.pathname.includes('rewrite-page')) {
+    url.pathname = '/ok';
+    return NextResponse.rewrite(url, {
+      request: { headers: request.headers },
+    });
+  }
+  if(url.pathname.includes('redirect-page')) {
+    url.pathname = '/ok';
+    return NextResponse.redirect(url);
+  }
+  if(url.pathname.includes('rewrite-app')) {
+    url.pathname = '/app/en/test/plop';
+    return NextResponse.rewrite(url, {
+      request: { headers: request.headers },
+    });
+  }
+  if(url.pathname.includes('redirect-app')) {
+    url.pathname = '/app/en/test/plop';
+    return NextResponse.redirect(url);
+  }
 }
 
 export const config = {
